@@ -10,10 +10,11 @@ The project may eventually implement the paper's listwise/tree-factorized object
 
 ## Decision
 
-Fine-tuning is a later research phase. The MVP and initial evaluation use frozen Qwen weights, exact scoring, and deterministic tool-selection fixtures.
+Fine-tuning follows the frozen-model MVP and its initial evaluation. The repository may contain a training scaffold (data contract, losses, and optional LoRA preparation), but no model should be trained until the frozen baseline is measured and a reproducible experiment configuration is approved.
 
 ## Consequences
 
 - Baseline correctness and calibration are measured first.
 - Fine-tuning work has a concrete comparison target.
-- Training code is intentionally absent from the MVP rather than partially implemented.
+- The training scaffold is not evidence that fine-tuning is complete or beneficial.
+- Any training run must compare against the frozen baseline and record model, data, template, and loss configuration.

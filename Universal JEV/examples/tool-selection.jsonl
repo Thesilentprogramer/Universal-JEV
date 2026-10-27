@@ -1,0 +1,2 @@
+{"context":"The user asks for today's weather in Mumbai.","candidates":[{"id":"search_web","description":"Search the web for current information"},{"id":"answer_directly","description":"Answer from existing knowledge"}],"target_id":"search_web"}
+{"context":"The user asks for a concise explanation of recursion.","candidates":[{"id":"search_web","description":"Search the web for current information"},{"id":"answer_directly","description":"Answer from existing knowledge"}],"target_id":"answer_directly"}

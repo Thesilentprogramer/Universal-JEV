@@ -12,6 +12,12 @@ local = [
   "transformers",
   "accelerate",
 ]
+training = [
+  "torch",
+  "transformers",
+  "accelerate",
+  "peft",
+]
 dev = [
   "pytest",
   "ruff",

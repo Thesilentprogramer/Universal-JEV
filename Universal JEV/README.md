@@ -17,6 +17,21 @@ The MVP is a Python SDK for agent tool selection:
 
 The first provider is a local Hugging Face adapter for Qwen2.5-1.5B/3B Instruct. Hosted providers, FastAPI, broader benchmarks, and fine-tuning are later phases.
 
+## Training scaffold
+
+The optional `training` extra provides LoRA preparation and composable losses for
+supervised decision fine-tuning. Training examples use JSON Lines with a context,
+candidates, and a labeled `target_id`; see `examples/tool-selection.jsonl`.
+
+```bash
+uv sync --extra training
+```
+
+`combined_loss` combines listwise decision supervision with optional
+KL(reference || current) preservation. It is a foundation for the paper-inspired
+training phase, not a claim that the complete training pipeline or its results
+have already been reproduced.
+
 ## Repository map
 
 - `CONTEXT.md` — project glossary and domain language

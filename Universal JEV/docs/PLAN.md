@@ -43,7 +43,7 @@
 ## Phase 4 — Research fine-tuning
 
 - Add reproducible labeled decision datasets.
-- Implement LoRA-based listwise/tree-factorized training.
+- Implement LoRA-based flat listwise training before separately specifying a tree-factorized objective.
 - Add KL regularization and compare against the frozen baseline.
 - Evaluate in-domain and out-of-domain behavior, calibration, and general-generation preservation.
 
