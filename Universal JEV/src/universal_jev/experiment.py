@@ -20,7 +20,7 @@ class TrainingRunConfig:
     seed: int = 42
     learning_rate: float = 2e-4
     epochs: int = 1
-    kl_weight: float = 1.0
+    kl_weight: float = 0.0
     lora_rank: int = 16
     lora_alpha: int = 32
     lora_dropout: float = 0.05

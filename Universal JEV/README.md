@@ -32,6 +32,24 @@ KL(reference || current) preservation. It is a foundation for the paper-inspired
 training phase, not a claim that the complete training pipeline or its results
 have already been reproduced.
 
+### Local listwise training
+
+The initial runner performs one labeled decision per optimizer step and is offline
+by default. Model weights must already exist locally or in the Hugging Face cache:
+
+```bash
+universal-jev-train \
+  --model Qwen/Qwen2.5-1.5B-Instruct \
+  --data examples/tool-selection.jsonl \
+  --output runs/qwen-tool-selection \
+  --revision <pinned-revision>
+```
+
+Pass `--allow-downloads` only when network model retrieval is intentional. The
+runner writes `run-manifest.json` before optimization and saves adapters through
+the model's `save_pretrained` interface. KL-preservation training is not wired
+into this first runner; nonzero KL configuration is rejected rather than ignored.
+
 ## Repository map
 
 - `CONTEXT.md` — project glossary and domain language
